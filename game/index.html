@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Sunspire Job — a heist game</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0a0d1c;
+    min-height: 100%;
+    font-family: system-ui, sans-serif;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    box-sizing: border-box;
+  }
+  canvas {
+    display: block;
+    width: min(1280px, 96vw);
+    height: auto;
+    background: #1c2340;
+    border: 2px solid #d9a441;
+    border-radius: 6px;
+    cursor: crosshair;
+  }
+  .help {
+    color: #b9b3a0;
+    font-size: 13px;
+    text-align: center;
+    max-width: 1280px;
+    line-height: 1.6;
+  }
+  .help b { color: #f2c14e; }
+</style>
+</head>
+<body>
+<canvas id="game" width="1280" height="720"></canvas>
+<p class="help">
+  <b>WASD / arrows</b> move &nbsp;·&nbsp; <b>Shift</b> sneak &nbsp;·&nbsp; <b>Click / Q</b> throw a coin (3 only) &nbsp;·&nbsp;
+  <b>Hold E</b> at the glass case to crack it &nbsp;·&nbsp; <b>R</b> restart &nbsp;·&nbsp; <b>M</b> mute<br>
+  Steal the Sunspire Diamond, then reach the service vent. Red cones and cameras raise the alarm — hide to let it fall.
+</p>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
